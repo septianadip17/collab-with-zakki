@@ -1,6 +1,13 @@
 import React from "react";
-import card3 from "../assets/card3.svg";
+import card3 from "../assets/card-3.svg";
 import cartAdd from "../assets/cart-add.svg";
+import coin from "../assets/coin-2.svg";
+import factory from "../assets/factory.svg";
+import gift from "../assets/gift.svg";
+import handTruck from "../assets/hand-truck.svg";
+import location from "../assets/location.svg";
+import userAdd from "../assets/user-add.svg";
+
 
 const Achievement = () => {
   const data = [
