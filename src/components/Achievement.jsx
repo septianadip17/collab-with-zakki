@@ -1,4 +1,6 @@
 import React from "react";
+import card3 from "../assets/card3.svg";
+import cartAdd from "../assets/cart-add.svg";
 
 const Achievement = () => {
   const data = [
