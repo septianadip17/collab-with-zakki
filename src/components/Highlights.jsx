@@ -2,8 +2,7 @@ import React from "react";
 
 const Highlights = () => {
   return (
-    <div className="max-w-screen-lg mx-auto">
-      {/* First Section */}
+    <div className=" mx-auto">
       <div className="relative">
         <img
           alt="A man working on a craft project"
@@ -30,14 +29,13 @@ const Highlights = () => {
           </button>
         </div>
       </div>
-      {/* Second Section */}
       <div className="relative mt-8">
         <img
           alt="Women working on craft projects"
           className="w-full h-auto"
           height="600"
           src="https://storage.googleapis.com/a1aa/image/DqCHqHa_JqNcVr6j1xSXkqrFlQCAW_gEWfL_qnZU0gc.jpg"
-          width="1200"
+          width="600"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-8">
           <h1 className="text-white text-3xl md:text-5xl font-bold">
