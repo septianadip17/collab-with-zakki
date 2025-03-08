@@ -69,7 +69,7 @@ const Achievement = () => {
             <img src={item.icon} alt={item.alt} />
             <div className="mx-auto">
               <h3 className="text-2xl font-bold text-primary">{item.value}</h3>
-              <p className="text-muted-foreground text-gray-400 text-sm">{item.label}</p>
+              <p className="text-muted-foreground text-gray-400 text-s">{item.label}</p>
             </div>
           </div>
         ))}
