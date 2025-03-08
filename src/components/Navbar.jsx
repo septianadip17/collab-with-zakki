@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/ecodoe-logo.png";
+import logo from "../assets/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
@@ -17,10 +17,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="p-2 flex mx-auto justify-between items-center shadow-md bg-white w-full z-50 sticky">
+    <nav className="p-6 flex mx-auto justify-between items-center shadow-md bg-white w-full z-50 sticky">
       {/* Logo */}
       <div className="w-1/4 justify-center flex items-center">
-        <img src={logo} alt="Ecodoe Logo" className="h-16 cursor-pointer" />
+        <img src={logo} alt="Ecodoe Logo" className="h-16 object-contain cursor-pointer" />
       </div>
 
       {/* Desktop Menu */}
