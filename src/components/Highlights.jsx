@@ -8,7 +8,7 @@ const highlightsData = [
   {
     image: manAboutUs,
     title: "Dari UMKM untuk Indonesia",
-    subtitle: "\"Ekonomi Gotong Royong\"",
+    subtitle: '"Ekonomi Gotong Royong"',
     description:
       "Ecodoe akan membawa Kreator UMKM Indonesia naik kelas dengan menghubungkan ke klien B2B, membuka akses pinjaman dana modal usaha, promosi produk dan perluasan pasar, pengurusan dokumen legalitas usaha, dan pelatihan dalam UMKM Inkubator.",
     buttonText: "Tentang Kami",
@@ -44,19 +44,35 @@ const highlightsData = [
   },
 ];
 
-const HighlightItem = ({ image, title, subtitle, description, buttonText, buttonLink, align }) => {
+const HighlightItem = ({
+  image,
+  title,
+  subtitle,
+  description,
+  buttonText,
+  buttonLink,
+  align,
+}) => {
   return (
     <div className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
       <div
         className={`relative p-6 md:p-12 text-white max-w-[90%] md:max-w-[50%] ${
           align === "right" ? "ml-auto text-right" : "mr-auto text-left"
         }`}
       >
         <h1 className="text-2xl md:text-4xl font-bold">{title}</h1>
-        {subtitle && <p className="text-lg md:text-2xl italic mt-2">{subtitle}</p>}
+        {subtitle && (
+          <p className="text-lg md:text-2xl italic mt-2">{subtitle}</p>
+        )}
         <p className="text-sm md:text-base mt-4">{description}</p>
-        <a href={buttonLink} className="mt-4 inline-block bg-[#147959] text-white px-4 md:px-6 py-2 rounded-full text-sm md:text-base">
+        <a
+          href={buttonLink}
+          className="mt-4 inline-block bg-[#147959] hover:bg-[#0e6e4c] text-white px-4 md:px-6 py-2 rounded-full text-sm md:text-base"
+        >
           {buttonText}
         </a>
       </div>
