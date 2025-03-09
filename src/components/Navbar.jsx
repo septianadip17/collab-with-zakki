@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <nav className=" lg:p-6 flex items-center justify-between lg:justify-around shadow-md bg-white w-full z-50 relative top-0">
       {/* Logo */}
-      <div className="flex-1 flex lg:justify-end w-1/5">
+      <div className="flex lg:justify-center w-1/5">
         <img
           src={logo}
           alt="Ecodoe Logo"
-          className="h-16 p-2 object-contain cursor-pointer"
+          className="sm:w:32 h-16 p-2 object-contain cursor-pointer"
         />
       </div>
 
