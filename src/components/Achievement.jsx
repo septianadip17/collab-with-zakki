@@ -8,73 +8,30 @@ import handTruck from "../assets/hand-truck.svg";
 import location from "../assets/location.svg";
 import userAdd from "../assets/user-add.svg";
 
+const achievements = [
+  { icon: userAdd, value: ">1.000", label: "UMKM Tergabung" },
+  { icon: gift, value: ">240", label: "Ragam Produk UMKM" },
+  { icon: location, value: "10", label: "Kota di Indonesia" },
+  { icon: handTruck, value: ">500.000 pcs", label: "Produk UMKM Kreator Terjual" },
+  { icon: cartAdd, value: ">50 JUTA", label: "Permintaan Pengadaan Produk UMKM" },
+  { icon: factory, value: ">12.000", label: "Perusahaan Ikut Mendukung UMKM" },
+  { icon: card3, value: ">10 Miliar", label: "Transaksi untuk UMKM" },
+  { icon: coin, value: ">600%", label: "Peningkatan Pendapatan per UMKM" },
+];
 
 const Achievement = () => {
-  const data = [
-    {
-      icon: userAdd,
-      alt: "UMKM Tergabung",
-      value: ">1.000",
-      label: "UMKM Tergabung",
-    },
-    {
-      icon: gift,
-      alt: "Ragam Produk",
-      value: ">240",
-      label: "Ragam Produk UMKM",
-    },
-    {
-      icon: location,
-      alt: "Kota di Indonesia",
-      value: "10",
-      label: "Kota di Indonesia",
-    },
-    {
-      icon: handTruck,  
-      alt: "Produk Terjual",
-      value: ">500.000 pcs",
-      label: "Produk UMKM Kreator Terjual",
-    },
-    {
-      icon: cartAdd,
-      alt: "Permintaan Pengadaan",
-      value: ">50 JUTA",
-      label: "Permintaan Pengadaan Produk UMKM",
-    },
-    {
-      icon: factory,  
-      alt: "Perusahaan Ikut",
-      value: ">12.000",
-      label: "Perusahaan Ikut Mendukung UMKM",
-    },
-    {
-      icon: card3,
-      alt: "Transaksi",
-      value: ">10 Miliar",
-      label: "Transaksi untuk UMKM",
-    },
-    {
-      icon: coin,
-      alt: "Peningkatan Pendapatan",
-      value: ">600%",
-      label: "Peningkatan Pendapatan per UMKM",
-    },
-  ];
-
   return (
-    <>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
-        {data.map((item, index) => (
-          <div key={index} className="flex items-center space-x-4">
-            <img src={item.icon} alt={item.alt} />
-            <div className="mx-auto">
-              <h3 className="text-2xl font-bold text-primary">{item.value}</h3>
-              <p className="text-muted-foreground text-gray-400 text-s">{item.label}</p>
-            </div>
+    <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 p-8">
+      {achievements.map((item, index) => (
+        <div key={index} className=" flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 text-center md:text-left">
+          <img src={item.icon} alt={item.label} className="w-12 h-12" />
+          <div>
+            <h3 className="text-2xl font-bold text-primary">{item.value}</h3>
+            <p className="text-gray-500 text-sm">{item.label}</p>
           </div>
-        ))}
-      </div>
-    </>
+        </div>
+      ))}
+    </div>
   );
 };
 
