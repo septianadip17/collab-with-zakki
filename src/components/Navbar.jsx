@@ -17,25 +17,30 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="p-6 flex mx-auto justify-between items-center shadow-md bg-white w-full z-50 sticky">
+    <nav className="p-6 flex items-center justify-between shadow-md bg-white w-full z-50 relative top-0">
       {/* Logo */}
-      <div className="w-1/4 justify-center flex items-center">
-        <img src={logo} alt="Ecodoe Logo" className="h-16 object-contain cursor-pointer" />
+      <div className="flex justify-center items-center">
+        <div className="items-center justify-center">
+
+        <img
+          src={logo}
+          alt="Ecodoe Logo"
+          className="h-16 object-contain cursor-pointer"
+        />
+        </div>
       </div>
 
       {/* Desktop Menu */}
-      <div className="w-3/4 ">
-        <ul className="hidden md:flex gap-x-6 justify-between px-4">
-          {menuItems.map((item, index) => (
-            <li
-              key={index}
-              className="hover:text-gray-700 hover:bg-gray-200 px-3 py-2 rounded cursor-pointer transition-colors text-lg"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="hidden md:flex items-center justify-center gap-x-6">
+        {menuItems.map((item, index) => (
+          <li
+            key={index}
+            className="hover:text-gray-700 hover:bg-gray-200 px-3 py-2 rounded cursor-pointer transition-colors text-lg"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
 
       {/* Mobile Menu Button */}
       <button
@@ -47,7 +52,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-full left-0 w-full bg-white shadow-md p-4 md:hidden transition-all duration-300 ${
+        className={`absolute top-full left-0 w-full bg-white shadow-md p-4 transition-all duration-300 md:hidden ${
           isOpen ? "block" : "hidden"
         }`}
       >
