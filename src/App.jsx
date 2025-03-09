@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Achievement from "./components/Achievement";
 import Highlights from "./components/Highlights";
 import Downloads from "./components/Downloads";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Achievement />
       <Highlights />
       <Downloads />
+      <Footer />
     </>
   );
 };
