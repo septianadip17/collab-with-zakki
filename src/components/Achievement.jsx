@@ -23,10 +23,10 @@ const Achievement = () => {
   return (
     <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 gap-6 p-8">
       {achievements.map((item, index) => (
-        <div key={index} className=" flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 text-center md:text-left">
-          <img src={item.icon} alt={item.label} className="w-12 h-12" />
-          <div>
-            <h3 className="text-2xl font-bold text-primary">{item.value}</h3>
+        <div key={index} className="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-4 text-center md:text-left m-6">
+          <img src={item.icon} alt={item.label} className="lg:size-28 size-16" />
+          <div className="">
+            <h3 className="lg:text-4xl text-2xl text-[#147959] font-bold text-primary">{item.value}</h3>
             <p className="text-gray-500 text-sm">{item.label}</p>
           </div>
         </div>
@@ -36,3 +36,4 @@ const Achievement = () => {
 };
 
 export default Achievement;
+
